@@ -1,8 +1,7 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import "./MembershipPage.css";
+import "./MemberShipPage.css";
 import { PricingSection } from "../components/PricingSection";
 
 gsap.registerPlugin(ScrollTrigger);
