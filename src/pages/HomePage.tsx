@@ -10,7 +10,7 @@ import { LocationCard } from "../components/programs-card";
 import { PricingSection } from "../components/PricingSection";
 
 const images = {
-  hero: "/images/hero-2.jpg",
+  hero: "/images/hero-2.jpeg",
   strength: "/images/image-strength.jpg",
   conditioning: "/images/image-push.jpg",
   recovery: "/images/image-recovery.jpg",
