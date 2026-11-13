@@ -1,0 +1,3120 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+/* =========================================================
+   SOUIFER FITNESS — HOME PAGE
+========================================================= */
+.volt-page .facility-main-image,
+.volt-page .coach-portrait {
+  overflow: hidden;
+  will-change: transform, clip-path;
+}
+.volt-page {
+  --home-bg: #101110;
+  --home-dark: #090b09;
+  --home-card: #171a16;
+  --home-card-light: #20251d;
+  --home-lime: #c9f249;
+  --home-white: #ffffff;
+  --home-text: #e5e7e2;
+  --home-muted: #a1a79b;
+  --home-border: rgba(255, 255, 255, 0.09);
+
+  width: 100%;
+  overflow: clip;
+  background: var(--home-bg);
+  color: var(--home-text);
+  font-family: "Manrope", sans-serif;
+}
+
+.volt-page *,
+.volt-page *::before,
+.volt-page *::after {
+  box-sizing: border-box;
+}
+
+.volt-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.volt-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.volt-page button {
+  font: inherit;
+}
+
+.volt-page .material-symbols-outlined {
+  display: inline-block;
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.volt-page .page-container {
+  width: min(calc(100% - 80px), 1440px);
+  margin-inline: auto;
+}
+
+.volt-page .section-space {
+  padding: 115px 0;
+}
+
+.volt-page ::selection {
+  color: var(--home-dark);
+  background: var(--home-lime);
+}
+
+/* =========================================================
+   SHARED ELEMENTS
+========================================================= */
+
+.volt-page .section-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.volt-page .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.volt-page .section-side-note {
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-align: right;
+}
+
+.volt-page .section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.volt-page .section-heading h2,
+.volt-page .membership-heading h2,
+.volt-page .facility-copy h2,
+.volt-page .coach-copy h2 {
+  margin: 0;
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 700;
+  letter-spacing: -3.5px;
+  line-height: 0.98;
+}
+
+.volt-page .section-heading h2 span,
+.volt-page .membership-heading h2 span,
+.volt-page .facility-copy h2 span,
+.volt-page .coach-copy h2 span {
+  color: var(--home-lime);
+}
+
+.volt-page .small-accent-line {
+  display: block;
+  width: 35px;
+  height: 2px;
+  margin-bottom: 17px;
+  background: var(--home-lime);
+  transition: width 0.4s ease;
+}
+
+.volt-page .section-heading:hover .small-accent-line {
+  width: 65px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.volt-page .button {
+  position: relative !important;
+  display: inline-flex !important;
+  min-height: 48px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 0 21px !important;
+  border: 1px solid transparent !important;
+  border-radius: 100px !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-align: center !important;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease !important;
+}
+
+.volt-page .button .material-symbols-outlined {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.volt-page .button:hover {
+  transform: translateY(-3px);
+}
+
+.volt-page .button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.volt-page .button-primary {
+  color: #101110;
+  background: var(--home-lime) !important;
+}
+
+.volt-page .button-primary:hover {
+  background: #d9ff64;
+  box-shadow:
+    0 10px 30px rgba(201, 242, 73, 0.18),
+    0 0 22px rgba(201, 242, 73, 0.12);
+}
+
+.volt-page .button-primary:hover .material-symbols-outlined {
+  transform: translateX(5px);
+}
+
+.volt-page .button-glass {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: var(--home-white);
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(12px);
+}
+
+.volt-page .button-glass:hover,
+.volt-page .button-secondary:hover {
+  border-color: var(--home-lime);
+  color: var(--home-lime);
+  background: rgba(201, 242, 73, 0.07);
+  box-shadow: 0 8px 25px rgba(201, 242, 73, 0.08);
+}
+
+.volt-page .button-large {
+  min-height: 55px;
+  padding-inline: 25px;
+}
+
+.volt-page .button-secondary {
+  border-color: var(--home-border);
+  color: var(--home-white);
+  background: var(--home-card);
+}
+
+.volt-page .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: gap 0.3s ease;
+}
+
+.volt-page .text-link:hover {
+  gap: 18px;
+}
+
+.volt-page .text-link .material-symbols-outlined {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.volt-page .text-link:hover .material-symbols-outlined {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero {
+  position: relative !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+
+  width: 100% !important;
+  min-height: calc(100svh - 88px) !important;
+  min-height: calc(100vh - 88px) !important;
+
+  margin-top: 80px !important;
+  padding: 60px 0 40px !important;
+
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  background-color: var(--home-dark) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.volt-page .hero::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 11, 9, 0.96) 0%,
+    rgba(9, 11, 9, 0.79) 42%,
+    rgba(9, 11, 9, 0.25) 100%
+  );
+  content: "";
+}
+
+.volt-page .hero::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    var(--home-bg) 0%,
+    transparent 25%,
+    rgba(9, 11, 9, 0.2) 100%
+  );
+  content: "";
+}
+
+.volt-page .hero-overlay {
+  position: absolute;
+  z-index: -1;
+  top: 12%;
+  right: -130px;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: rgba(201, 242, 73, 0.08);
+  filter: blur(110px);
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s ease;
+}
+
+.volt-page .hero:hover .hero-overlay {
+  opacity: 1.5;
+  transform: scale(1.15);
+}
+
+.volt-page .hero-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 35px;
+}
+
+.volt-page .status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(201, 242, 73, 0.25);
+  border-radius: 100px;
+  color: var(--home-text);
+  background: rgba(9, 11, 9, 0.55);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.volt-page .status-pill:hover {
+  border-color: var(--home-lime);
+  background: rgba(201, 242, 73, 0.09);
+}
+
+.volt-page .status-dot {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--home-lime);
+  box-shadow: 0 0 12px rgba(201, 242, 73, 0.7);
+  animation: homePulse 2s infinite;
+}
+
+.volt-page .hero-content {
+  padding-top: 80px;
+  padding-bottom: 65px;
+  animation: homeReveal 0.9s ease both;
+}
+
+.volt-page .eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 24px;
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+}
+
+.volt-page .eyebrow-line {
+  width: 27px;
+  height: 1px;
+  background: var(--home-lime);
+  transition: width 0.35s ease;
+}
+
+.volt-page .hero-content:hover .eyebrow-line {
+  width: 48px;
+}
+
+.volt-page .hero h1 {
+  margin: 0;
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(76px, 11vw, 145px);
+  font-weight: 700;
+  letter-spacing: -8px;
+  line-height: 0.83;
+}
+
+.volt-page .hero h1 span {
+  display: inline-block;
+  color: var(--home-lime);
+  transition:
+    text-shadow 0.4s ease,
+    transform 0.4s ease;
+}
+
+.volt-page .hero h1:hover span {
+  text-shadow: 0 0 30px rgba(201, 242, 73, 0.2);
+}
+
+.volt-page .hero-content > p {
+  max-width: 550px;
+  margin: 32px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.volt-page .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.volt-page .hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 45px;
+}
+
+.volt-page .trust-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.volt-page .trust-avatars span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  margin-left: -8px;
+  place-items: center;
+  border: 2px solid var(--home-dark);
+  border-radius: 50%;
+  color: var(--home-dark);
+  background: var(--home-lime);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.volt-page .trust-avatars span:first-child {
+  margin-left: 0;
+  color: var(--home-white);
+  background: #454b40;
+}
+
+.volt-page .trust-avatars span:last-child {
+  color: var(--home-white);
+  background: #30362c;
+}
+
+.volt-page .trust-avatars:hover span {
+  transform: translateY(-5px);
+}
+
+.volt-page .hero-trust > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.volt-page .hero-trust strong {
+  color: var(--home-white);
+  font-size: 11px;
+}
+
+.volt-page .hero-trust > div:last-child > span {
+  color: var(--home-muted);
+  font-size: 10px;
+}
+
+.volt-page .hero-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.volt-page .scroll-cue,
+.volt-page .hero-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+
+.volt-page .scroll-cue-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid var(--home-border);
+  border-radius: 50%;
+  color: var(--home-lime);
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.volt-page .scroll-cue:hover .scroll-cue-icon {
+  transform: translateY(4px);
+  border-color: var(--home-lime);
+  background: rgba(201, 242, 73, 0.08);
+}
+
+.volt-page .scroll-cue-icon .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.volt-page .hero-index {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+}
+
+.volt-page .hero-index span:first-child {
+  color: var(--home-lime);
+}
+
+.volt-page .hero-index i {
+  width: 50px;
+  height: 1px;
+  background: var(--home-border);
+}
+
+.volt-page .hero-location .material-symbols-outlined {
+  color: var(--home-lime);
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.volt-page .hero-location:hover .material-symbols-outlined {
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   ETHOS / METRICS
+========================================================= */
+
+.volt-page .ethos-section {
+  padding: 115px 0;
+  background: var(--home-bg);
+}
+
+.volt-page .ethos-heading {
+  align-items: flex-end;
+}
+
+.volt-page .ethos-description {
+  max-width: 390px;
+}
+
+.volt-page .ethos-description p {
+  margin: 0 0 22px;
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.volt-page .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--home-border);
+  border-radius: 17px;
+  overflow: hidden;
+  background: var(--home-card);
+}
+
+.volt-page .metric-card {
+  display: flex;
+  min-width: 0;
+  min-height: 205px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  border-right: 1px solid var(--home-border);
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.volt-page .metric-card:last-child {
+  border-right: 0;
+}
+
+.volt-page .metric-card:hover {
+  position: relative;
+  z-index: 1;
+  background: var(--home-card-light);
+  box-shadow: inset 0 0 0 1px rgba(201, 242, 73, 0.12);
+}
+
+.volt-page .metric-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+
+.volt-page .metric-card-top .material-symbols-outlined {
+  color: var(--home-lime);
+  font-size: 20px;
+  transition: transform 0.35s ease;
+}
+
+.volt-page .metric-card:hover .metric-card-top .material-symbols-outlined {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+.volt-page .metric-card-bottom {
+  margin-top: 30px;
+}
+
+.volt-page .metric-value {
+  display: block;
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(32px, 3.4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  overflow-wrap: anywhere;
+  transition: color 0.3s ease;
+}
+
+.volt-page .metric-card:hover .metric-value {
+  color: var(--home-lime);
+}
+
+.volt-page .metric-card-bottom p {
+  margin: 8px 0 0;
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.volt-page .programs-section {
+  background: var(--home-dark);
+}
+
+.volt-page .programs-heading {
+  align-items: flex-end;
+}
+
+.volt-page .programs-heading > p {
+  max-width: 390px;
+  margin: 0 0 5px;
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.volt-page .program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+.sf-program-card {
+  position: relative !important;
+  overflow: hidden !important;
+
+  border-radius: 8px !important;
+  border: 1px solid rgba(201, 243, 106, 0.28) !important;
+
+  background: linear-gradient(
+    145deg,
+    rgba(201, 243, 106, 0.045),
+    rgba(255, 255, 255, 0.015) 45%,
+    rgba(0, 0, 0, 0.2)
+  ) !important;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(201, 243, 106, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease !important;
+}
+
+/* Hover */
+
+.volt-page .program-grid > * {
+  min-width: 0;
+  height: 100%;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.volt-page .program-grid > *:hover {
+  transform: translateY(-7px);
+}
+
+.volt-page .programs-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid var(--home-border);
+}
+
+.volt-page .programs-footer > span {
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.volt-page .programs-footer > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: gap 0.3s ease;
+}
+
+.volt-page .programs-footer > a:hover {
+  gap: 16px;
+}
+
+.volt-page .programs-footer .material-symbols-outlined {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.volt-page .programs-footer > a:hover .material-symbols-outlined {
+  transform: translateX(4px);
+}
+/* =========================================================
+   SOUIFER FITNESS — MEMBERSHIP PLANS SECTION
+========================================================= */
+
+.membership-plans-section {
+  --membership-bg: #101110 !important;
+  --membership-bg-deep: #090b09 !important;
+  --membership-card: #171a16 !important;
+  --membership-card-hover: #1e231b !important;
+
+  --membership-lime: #c9f249 !important;
+  --membership-white: #ffffff !important;
+  --membership-text: #e5e7e2 !important;
+  --membership-muted: #a1a79b !important;
+
+  --membership-border: rgba(255, 255, 255, 0.09) !important;
+  --membership-border-hover: rgba(201, 242, 73, 0.4) !important;
+
+  position: relative !important;
+  width: 100% !important;
+  padding: clamp(85px, 10vw, 145px) 0 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  background: var(--membership-bg) !important;
+  color: var(--membership-white) !important;
+
+  font-family: "Manrope", sans-serif !important;
+}
+
+.membership-plans-section *,
+.membership-plans-section *::before,
+.membership-plans-section *::after {
+  box-sizing: border-box !important;
+}
+
+.membership-plans-section::before {
+  position: absolute !important;
+  z-index: -1 !important;
+  top: 0 !important;
+  left: 50% !important;
+  width: min(850px, 90%) !important;
+  height: 500px !important;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(201, 242, 73, 0.055),
+    transparent 70%
+  ) !important;
+
+  content: "" !important;
+  pointer-events: none !important;
+  transform: translateX(-50%) !important;
+}
+
+.membership-container {
+  position: relative !important;
+  width: min(90%, 1380px) !important;
+  margin: 0 auto !important;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.membership-section-heading {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 50px !important;
+  margin-bottom: 55px !important;
+}
+
+.membership-section-heading > div {
+  min-width: 0 !important;
+}
+
+.membership-section-heading .section-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 22px !important;
+
+  color: var(--membership-lime) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+.membership-section-heading .section-kicker::before {
+  width: 22px !important;
+  height: 1px !important;
+  background: var(--membership-lime) !important;
+  content: "" !important;
+}
+
+.membership-section-heading h2 {
+  max-width: 760px !important;
+  margin: 0 !important;
+
+  color: var(--membership-white) !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: clamp(38px, 5.5vw, 76px) !important;
+  font-weight: 700 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -3.5px !important;
+  text-transform: uppercase !important;
+}
+
+.membership-section-heading h2 span {
+  color: var(--membership-lime) !important;
+}
+
+.membership-section-heading p {
+  max-width: 360px !important;
+  margin: 0 0 5px !important;
+
+  color: var(--membership-muted) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.9 !important;
+}
+
+/* =========================================================
+   BILLING SWITCHER
+========================================================= */
+
+.membership-billing {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 42px !important;
+}
+
+.billing-switcher {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 5px !important;
+
+  max-width: 100% !important;
+  padding: 6px !important;
+
+  border: 1px solid var(--membership-border) !important;
+  border-radius: 12px !important;
+  background: #151713 !important;
+}
+
+.billing-switcher button {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+
+  min-height: 44px !important;
+  padding: 10px 18px !important;
+
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+
+  color: var(--membership-muted) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+
+  cursor: pointer !important;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease !important;
+}
+
+.billing-switcher button:hover {
+  color: var(--membership-white) !important;
+}
+
+.billing-switcher button.active,
+.billing-switcher button[aria-pressed="true"] {
+  border-color: rgba(201, 242, 73, 0.25) !important;
+  background: var(--membership-lime) !important;
+  color: #101110 !important;
+}
+
+.billing-switcher button span {
+  color: inherit !important;
+}
+
+/* =========================================================
+   MEMBERSHIP GRID
+========================================================= */
+
+.membership-plans-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+}
+
+/* =========================================================
+   PLAN CARD
+========================================================= */
+
+.membership-plan-card {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+
+  min-width: 0 !important;
+  min-height: 100% !important;
+  padding: 30px !important;
+  overflow: hidden !important;
+
+  border: 1px solid var(--membership-border) !important;
+  border-radius: 14px !important;
+  background: var(--membership-card) !important;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease !important;
+}
+
+.membership-plan-card:hover {
+  transform: translateY(-7px) !important;
+  border-color: var(--membership-border-hover) !important;
+  background: var(--membership-card-hover) !important;
+}
+
+.membership-plan-card::before {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 2px !important;
+
+  background: transparent !important;
+  content: "" !important;
+  transition: background 0.3s ease !important;
+}
+
+.membership-plan-card:hover::before {
+  background: var(--membership-lime) !important;
+}
+
+/* =========================================================
+   RECOMMENDED PLAN
+========================================================= */
+
+.membership-plan-card.recommended,
+.membership-plan-card.featured {
+  border-color: rgba(201, 242, 73, 0.5) !important;
+  background:
+    linear-gradient(145deg, rgba(201, 242, 73, 0.07), transparent 45%), #171a16 !important;
+}
+
+.membership-plan-card.recommended::before,
+.membership-plan-card.featured::before {
+  background: var(--membership-lime) !important;
+}
+
+.recommended-badge {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+
+  padding: 9px 15px !important;
+
+  border-radius: 0 12px 0 10px !important;
+  background: var(--membership-lime) !important;
+
+  color: #101110 !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+/* =========================================================
+   PLAN CONTENT
+========================================================= */
+
+.plan-card-content {
+  display: flex !important;
+  flex: 1 !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+}
+
+.plan-card-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin-bottom: 30px !important;
+}
+
+.plan-card-top h3 {
+  margin: 0 !important;
+
+  color: var(--membership-white) !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 23px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.7px !important;
+  text-transform: uppercase !important;
+}
+
+.plan-commitment {
+  color: var(--membership-muted) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+.plan-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 43px !important;
+  height: 43px !important;
+  flex-shrink: 0 !important;
+
+  border: 1px solid rgba(201, 242, 73, 0.2) !important;
+  border-radius: 10px !important;
+  background: rgba(201, 242, 73, 0.08) !important;
+
+  color: var(--membership-lime) !important;
+}
+
+.plan-icon svg {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+.plan-description {
+  min-height: 52px !important;
+  margin: 0 0 26px !important;
+
+  color: var(--membership-muted) !important;
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+}
+
+/* =========================================================
+   PLAN PRICE
+========================================================= */
+
+.plan-price {
+  display: flex !important;
+  align-items: baseline !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.plan-price strong {
+  color: var(--membership-white) !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: clamp(35px, 3vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: -2px !important;
+}
+
+.plan-price span {
+  color: var(--membership-muted) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.plan-price-note {
+  display: block !important;
+  min-height: 18px !important;
+  margin-bottom: 25px !important;
+
+  color: var(--membership-muted) !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.plan-divider {
+  width: 100% !important;
+  height: 1px !important;
+  margin: 5px 0 25px !important;
+
+  border: 0 !important;
+  background: var(--membership-border) !important;
+}
+
+/* =========================================================
+   PLAN FEATURES
+========================================================= */
+
+.plan-features-label {
+  margin: 0 0 18px !important;
+
+  color: var(--membership-white) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.3px !important;
+  text-transform: uppercase !important;
+}
+
+.plan-features {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+
+  margin: 0 0 30px !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.plan-features li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 11px !important;
+
+  color: var(--membership-text) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+.plan-features li svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+
+  color: var(--membership-lime) !important;
+}
+
+.plan-features li .feature-disabled {
+  color: var(--membership-muted) !important;
+  opacity: 0.5 !important;
+}
+
+/* =========================================================
+   PLAN BUTTON
+========================================================= */
+
+.plan-select-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+
+  width: 100% !important;
+  min-height: 52px !important;
+  margin-top: auto !important;
+  padding: 14px 20px !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 7px !important;
+  background: transparent !important;
+
+  color: var(--membership-white) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+
+  cursor: pointer !important;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+.plan-select-button:hover {
+  border-color: var(--membership-lime) !important;
+  background: var(--membership-lime) !important;
+  color: #101110 !important;
+  transform: translateY(-2px) !important;
+}
+
+.membership-plan-card.recommended .plan-select-button,
+.membership-plan-card.featured .plan-select-button {
+  border-color: var(--membership-lime) !important;
+  background: var(--membership-lime) !important;
+  color: #101110 !important;
+}
+
+.membership-plan-card.recommended .plan-select-button:hover,
+.membership-plan-card.featured .plan-select-button:hover {
+  background: #dcff70 !important;
+  border-color: #dcff70 !important;
+}
+
+.plan-select-button svg {
+  width: 16px !important;
+  height: 16px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.plan-select-button:hover svg {
+  transform: translateX(4px) !important;
+}
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.membership-bottom-note {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+
+  margin-top: 35px !important;
+  color: var(--membership-muted) !important;
+
+  font-size: 11px !important;
+  line-height: 1.7 !important;
+  text-align: center !important;
+}
+
+.membership-bottom-note svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex-shrink: 0 !important;
+  color: var(--membership-lime) !important;
+}
+
+/* =========================================================
+   TABLET — 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .membership-container {
+    width: min(92%, 900px) !important;
+  }
+
+  .membership-section-heading {
+    gap: 30px !important;
+    margin-bottom: 45px !important;
+  }
+
+  .membership-section-heading h2 {
+    font-size: clamp(38px, 6vw, 60px) !important;
+  }
+
+  .membership-plans-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .membership-plan-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+  .membership-plans-section {
+    padding: 75px 0 !important;
+  }
+
+  .membership-container {
+    width: calc(100% - 36px) !important;
+  }
+
+  .membership-section-heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .membership-section-heading .section-kicker {
+    margin-bottom: 16px !important;
+    font-size: 10px !important;
+  }
+
+  .membership-section-heading h2 {
+    font-size: clamp(36px, 10vw, 54px) !important;
+    letter-spacing: -2px !important;
+  }
+
+  .membership-section-heading p {
+    max-width: 480px !important;
+    font-size: 13px !important;
+  }
+
+  .membership-billing {
+    justify-content: flex-start !important;
+    margin-bottom: 28px !important;
+  }
+
+  .billing-switcher {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  .billing-switcher button {
+    min-width: 0 !important;
+    min-height: 42px !important;
+    padding: 9px 5px !important;
+    font-size: 9px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .membership-plans-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 15px !important;
+  }
+
+  .membership-plan-card:last-child:nth-child(odd) {
+    grid-column: auto !important;
+  }
+
+  .membership-plan-card {
+    padding: 25px !important;
+  }
+
+  .plan-description {
+    min-height: 0 !important;
+  }
+
+  .plan-price strong {
+    font-size: 43px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE — 400px
+========================================================= */
+
+@media (max-width: 400px) {
+  .membership-plans-section {
+    padding: 65px 0 !important;
+  }
+
+  .membership-container {
+    width: calc(100% - 28px) !important;
+  }
+
+  .membership-section-heading h2 {
+    font-size: clamp(32px, 10vw, 42px) !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  .membership-plan-card {
+    padding: 21px !important;
+  }
+
+  .plan-card-top {
+    margin-bottom: 24px !important;
+  }
+
+  .plan-card-top h3 {
+    font-size: 20px !important;
+  }
+
+  .plan-price strong {
+    font-size: 38px !important;
+  }
+
+  .billing-switcher button {
+    font-size: 8px !important;
+  }
+
+  .recommended-badge {
+    padding: 8px 10px !important;
+    font-size: 8px !important;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL DEVICES — 200px to 320px
+========================================================= */
+
+@media (max-width: 320px) {
+  .membership-container {
+    width: calc(100% - 22px) !important;
+  }
+
+  .membership-section-heading h2 {
+    font-size: 30px !important;
+    letter-spacing: -1.2px !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .membership-section-heading p {
+    font-size: 12px !important;
+  }
+
+  .membership-plan-card {
+    padding: 16px !important;
+    border-radius: 10px !important;
+  }
+
+  .plan-card-top {
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .plan-card-top h3 {
+    font-size: 18px !important;
+  }
+
+  .plan-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .plan-price strong {
+    font-size: 32px !important;
+  }
+
+  .plan-features li {
+    font-size: 11px !important;
+  }
+
+  .plan-select-button {
+    min-height: 46px !important;
+    padding: 11px 8px !important;
+    font-size: 9px !important;
+  }
+
+  .billing-switcher {
+    gap: 2px !important;
+    padding: 4px !important;
+  }
+
+  .billing-switcher button {
+    padding: 8px 2px !important;
+    font-size: 7px !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .recommended-badge {
+    font-size: 7px !important;
+    padding: 7px 8px !important;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY & MOTION
+========================================================= */
+
+.membership-plans-section button:focus-visible {
+  outline: 2px solid var(--membership-lime) !important;
+  outline-offset: 4px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membership-plans-section *,
+  .membership-plans-section *::before,
+  .membership-plans-section *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* =========================================================
+   FACILITY
+========================================================= */
+
+.volt-page .facility-section {
+  padding: 115px 0;
+  background: var(--home-bg);
+}
+
+.volt-page .facility-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 85px;
+}
+
+.volt-page .facility-visuals {
+  min-width: 0;
+}
+
+.volt-page .facility-main-image {
+  position: relative;
+  min-height: 530px;
+  overflow: hidden;
+  border: 1px solid var(--home-border);
+  border-radius: 19px;
+  background-color: var(--home-card);
+  background-position: center;
+  background-size: cover;
+  isolation: isolate;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.volt-page .facility-main-image::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(9, 11, 9, 0.8), transparent 55%);
+  content: "";
+}
+
+.volt-page .facility-main-image:hover {
+  border-color: rgba(201, 242, 73, 0.4);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.volt-page .facility-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(9, 11, 9, 0.75), transparent 65%);
+  transition: opacity 0.4s ease;
+}
+
+.volt-page .facility-main-image:hover .facility-image-fade {
+  opacity: 0.75;
+}
+
+.volt-page .facility-image-label {
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--home-white);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.volt-page .facility-image-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  color: var(--home-white);
+  background: rgba(9, 11, 9, 0.45);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  backdrop-filter: blur(10px);
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.volt-page .facility-main-image:hover .facility-image-number {
+  border-color: var(--home-lime);
+  color: var(--home-lime);
+}
+
+.volt-page .facility-feature-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+
+  gap: 10px !important;
+  margin-top: 18px !important;
+}
+
+.volt-page .facility-feature {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  width: 80% !important;
+  min-height: 40px !important;
+  align-items: center !important;
+  justify-content: start !important;
+  gap: 8px !important;
+  padding: 9px 16px !important;
+
+  border: 1px solid var(--home-border) !important;
+  border-radius: 100px !important;
+  background: var(--home-card) !important;
+
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--home-white) !important;
+  white-space: nowrap !important;
+
+  cursor: default;
+  transition: all 0.3s ease !important;
+}
+
+.volt-page .facility-feature:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 242, 73, 0.3);
+  background: var(--home-card-light);
+}
+
+.volt-page .feature-icon {
+  display: grid;
+  flex: 0 0 39px;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid rgba(201, 242, 73, 0.2);
+  border-radius: 10px;
+  color: var(--home-lime);
+  background: rgba(201, 242, 73, 0.06);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.volt-page .facility-feature:hover .feature-icon {
+  transform: rotate(-7deg);
+  background: rgba(201, 242, 73, 0.14);
+}
+
+.volt-page .feature-icon .material-symbols-outlined {
+  font-size: 19px;
+}
+
+.volt-page .facility-feature > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.volt-page .facility-feature strong {
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+.volt-page .facility-feature small {
+  color: var(--home-muted);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.volt-page .facility-copy {
+  min-width: 0;
+}
+
+.volt-page .facility-copy .section-topline {
+  margin-bottom: 25px;
+}
+
+.volt-page .facility-copy h2 {
+  font-size: clamp(50px, 6vw, 75px);
+}
+
+.volt-page .facility-copy > p {
+  max-width: 480px;
+  margin: 25px 0 30px;
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.volt-page .facility-list {
+  margin-bottom: 32px;
+  border-top: 1px solid var(--home-border);
+}
+
+.volt-page .facility-list-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 19px 0;
+  border-bottom: 1px solid var(--home-border);
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease;
+}
+
+.volt-page .facility-list-item:hover {
+  padding-inline: 9px;
+  background: rgba(201, 242, 73, 0.025);
+}
+
+.volt-page .facility-list-number {
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+}
+
+.volt-page .facility-list-item > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.volt-page .facility-list-item strong {
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.volt-page .facility-list-item:hover strong {
+  color: var(--home-lime);
+}
+
+.volt-page .facility-list-item small {
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.volt-page .facility-list-item > .material-symbols-outlined {
+  color: var(--home-lime);
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.volt-page .facility-list-item:hover > .material-symbols-outlined {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   COACHES
+========================================================= */
+
+.volt-page .coach-section {
+  background: var(--home-dark);
+}
+
+.volt-page .coach-panel {
+  padding: 25px;
+  border: 1px solid var(--home-border);
+  border-radius: 21px;
+  background: var(--home-card);
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.volt-page .coach-panel:hover {
+  border-color: rgba(201, 242, 73, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.volt-page .coach-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.volt-page .coach-portrait-wrap {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: var(--home-dark) !important;
+}
+
+.volt-page .coach-portrait {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+
+  transition:
+    filter 0.6s ease,
+    transform 0.8s ease;
+}
+
+.volt-page .coach-portrait-wrap:hover .coach-portrait {
+  filter: grayscale(15%);
+  transform: scale(1.06);
+}
+
+.volt-page .coach-portrait-wrap::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(9, 11, 9, 0.9), transparent 45%);
+  content: "";
+  pointer-events: none;
+}
+
+.volt-page .coach-image-caption {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--home-white);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+
+.volt-page .coach-image-caption span:first-child {
+  color: var(--home-lime);
+}
+
+.volt-page .coach-copy {
+  min-width: 0;
+  padding: 30px 20px 30px 0;
+}
+
+.volt-page .coach-copy h2 {
+  margin-top: 22px;
+  font-size: clamp(48px, 5.5vw, 70px);
+}
+
+.volt-page .coach-copy blockquote {
+  margin: 28px 0 17px;
+  padding-left: 18px;
+  border-left: 2px solid var(--home-lime);
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+  transition: padding-left 0.3s ease;
+}
+
+.volt-page .coach-copy blockquote:hover {
+  padding-left: 25px;
+}
+
+.volt-page .coach-copy > p {
+  max-width: 500px;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.volt-page .coach-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin: 30px 0;
+  padding: 22px 0;
+  border-top: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.volt-page .coach-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.volt-page .coach-stats strong {
+  color: var(--home-lime);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.volt-page .coach-stats > div:hover strong {
+  transform: translateY(-3px);
+  text-shadow: 0 0 15px rgba(201, 242, 73, 0.25);
+}
+
+.volt-page .coach-stats span {
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.5px;
+}
+/*==========
+   FINAL CTA
+========================================================= */
+
+.volt-page .final-cta-section {
+  padding: 30px 0 115px;
+  background: var(--home-bg);
+}
+
+.volt-page .final-cta-panel {
+  position: relative;
+  display: flex;
+  min-height: 510px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(201, 242, 73, 0.2);
+  border-radius: 22px;
+  background:
+    linear-gradient(120deg, rgba(201, 242, 73, 0.065), transparent 55%),
+    var(--home-card);
+  isolation: isolate;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.volt-page .final-cta-panel:hover {
+  border-color: rgba(201, 242, 73, 0.45);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.volt-page .cta-glow {
+  position: absolute;
+  z-index: -1;
+  top: -220px;
+  right: -100px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: rgba(201, 242, 73, 0.1);
+  filter: blur(110px);
+  pointer-events: none;
+  transition: transform 0.8s ease;
+}
+
+.volt-page .final-cta-panel:hover .cta-glow {
+  transform: scale(1.2);
+}
+
+.volt-page .final-cta-content {
+  position: relative;
+  z-index: 2;
+  width: 75%;
+  padding: clamp(35px, 6vw, 80px);
+}
+
+.volt-page .final-cta-content > .section-kicker {
+  flex-wrap: wrap;
+}
+
+.volt-page .final-cta-content h2 {
+  margin: 30px 0 20px;
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(65px, 9vw, 110px);
+  font-weight: 700;
+  letter-spacing: -6px;
+  line-height: 0.88;
+}
+
+.volt-page .final-cta-content h2 span {
+  color: var(--home-lime);
+  transition: text-shadow 0.4s ease;
+}
+
+.volt-page .final-cta-panel:hover .final-cta-content h2 span {
+  text-shadow: 0 0 25px rgba(201, 242, 73, 0.2);
+}
+
+.volt-page .final-cta-content > p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.volt-page .cta-decoration {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 5%;
+  display: flex;
+  width: 330px;
+  height: 330px;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.volt-page .cta-decoration > span {
+  color: rgba(201, 242, 73, 0.09);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 280px;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    color 0.5s ease,
+    transform 0.7s ease;
+}
+
+.volt-page .final-cta-panel:hover .cta-decoration > span {
+  color: rgba(201, 242, 73, 0.15);
+  transform: scale(1.05);
+}
+
+.volt-page .cta-decoration i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(201, 242, 73, 0.12);
+  border-radius: 50%;
+  transition:
+    transform 0.7s ease,
+    border-color 0.4s ease;
+}
+
+.volt-page .cta-decoration i:nth-child(2) {
+  width: 75%;
+  height: 75%;
+}
+
+.volt-page .cta-decoration i:nth-child(3) {
+  width: 50%;
+  height: 50%;
+}
+
+.volt-page .final-cta-panel:hover .cta-decoration i {
+  border-color: rgba(201, 242, 73, 0.25);
+  transform: rotate(20deg);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.volt-page .site-footer {
+  padding: 85px 0 25px;
+  border-top: 1px solid var(--home-border);
+  background: var(--home-dark);
+}
+
+.volt-page .footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.8fr;
+  gap: 70px;
+  padding-bottom: 65px;
+}
+
+.volt-page .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.volt-page .footer-brand > span:last-child {
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.volt-page .footer-brand-column h2 {
+  margin: 28px 0 12px;
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+.volt-page .footer-brand-column > p {
+  max-width: 330px;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.volt-page .footer-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 27px;
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+
+.volt-page .footer-status .status-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.volt-page .footer-label {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--home-lime);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+.volt-page .footer-dispatch h3 {
+  margin: 0 0 12px;
+  color: var(--home-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+}
+
+.volt-page .footer-dispatch > p {
+  max-width: 350px;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.volt-page .newsletter-static {
+  display: flex;
+  min-height: 51px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 22px;
+  padding: 6px 7px 6px 15px;
+  border: 1px solid var(--home-border);
+  border-radius: 100px;
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.volt-page .newsletter-static:hover {
+  border-color: rgba(201, 242, 73, 0.4);
+  background: rgba(201, 242, 73, 0.035);
+}
+
+.volt-page .newsletter-static strong {
+  display: grid;
+  flex: 0 0 37px;
+  width: 37px;
+  height: 37px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--home-dark);
+  background: var(--home-lime);
+  transition: transform 0.3s ease;
+}
+
+.volt-page .newsletter-static:hover strong {
+  transform: rotate(-45deg);
+}
+
+.volt-page .newsletter-static .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.volt-page .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.volt-page .social-links a {
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.volt-page .social-links a:hover {
+  color: var(--home-lime);
+  transform: translateY(-3px);
+}
+
+.volt-page .footer-links-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.volt-page .footer-links-column > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.volt-page .footer-links-column .footer-label {
+  margin-bottom: 7px;
+}
+
+.volt-page .footer-links-column a {
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.volt-page .footer-links-column a:hover {
+  color: var(--home-lime);
+  transform: translateX(4px);
+}
+
+.volt-page .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 23px;
+  border-top: 1px solid var(--home-border);
+  color: var(--home-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+}
+
+.volt-page .footer-bottom > div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.volt-page .footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--home-lime);
+  transition: gap 0.3s ease;
+}
+
+.volt-page .footer-bottom a:hover {
+  gap: 11px;
+}
+
+.volt-page .footer-bottom .material-symbols-outlined {
+  font-size: 14px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes homePulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(201, 242, 73, 0.7);
+  }
+
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 4px rgba(201, 242, 73, 0.3);
+  }
+}
+
+@keyframes homeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET / LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+  .volt-page .header-inner {
+    width: calc(100% - 48px);
+  }
+
+  .volt-page .main-nav {
+    gap: 14px;
+  }
+
+  .volt-page .main-nav > a:not(.mobile-nav-join) {
+    font-size: 8px;
+  }
+
+  .volt-page .facility-layout {
+    gap: 45px;
+  }
+
+  .volt-page .coach-layout {
+    gap: 35px;
+  }
+
+  .volt-page .footer-grid {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .volt-page .page-container {
+    width: calc(100% - 48px);
+  }
+
+  .volt-page .header-inner {
+    min-height: 76px;
+  }
+
+  .volt-page .header-join {
+    display: none;
+  }
+
+  .volt-page .menu-toggle {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    border: 1px solid var(--home-border);
+    border-radius: 12px;
+    color: var(--home-lime);
+    background: var(--home-card);
+    cursor: pointer;
+    transition:
+      border-color 0.3s ease,
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .volt-page .menu-toggle:hover {
+    transform: rotate(5deg);
+    border-color: var(--home-lime);
+    background: var(--home-card-light);
+  }
+
+  .volt-page .menu-toggle .material-symbols-outlined {
+    font-size: 22px;
+  }
+
+  .volt-page .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 24px 25px;
+    border-bottom: 1px solid var(--home-border);
+    background: var(--home-dark);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .volt-page .main-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .volt-page .main-nav > a:not(.mobile-nav-join) {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--home-border);
+    font-size: 10px;
+  }
+
+  .volt-page .main-nav > a:not(.mobile-nav-join)::after {
+    display: none;
+  }
+
+  .volt-page .main-nav .mobile-nav-join {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding: 15px 18px;
+    border-radius: 100px;
+    color: var(--home-dark);
+    background: var(--home-lime);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .volt-page .main-nav .mobile-nav-join:hover {
+    transform: translateY(-2px);
+    background: #d9ff64;
+  }
+
+  .volt-page .mobile-nav-join .material-symbols-outlined {
+    font-size: 17px;
+  }
+
+  .volt-page .hero {
+    min-height: 730px;
+  }
+
+  .volt-page .hero h1 {
+    font-size: clamp(70px, 12vw, 110px);
+    letter-spacing: -5px;
+  }
+
+  .volt-page .section-space,
+  .volt-page .ethos-section,
+  .volt-page .facility-section,
+  .volt-page .membership-section {
+    padding: 85px 0;
+  }
+
+  .volt-page .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .volt-page .metric-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .volt-page .metric-card:nth-child(n + 3) {
+    border-top: 1px solid var(--home-border);
+  }
+
+  .volt-page .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .volt-page .facility-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .volt-page .facility-main-image {
+    min-height: 460px;
+  }
+
+  .volt-page .coach-layout {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 25px;
+  }
+
+  .volt-page .coach-portrait-wrap {
+    min-height: 470px;
+  }
+
+  .volt-page .coach-panel {
+    padding: 18px;
+  }
+
+  .volt-page .coach-copy {
+    padding: 20px 10px 20px 0;
+  }
+
+  .volt-page .membership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .volt-page .plan-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .volt-page .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .volt-page .footer-links-column {
+    grid-column: 1 / -1;
+    padding-top: 30px;
+    border-top: 1px solid var(--home-border);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .volt-page .page-container {
+    width: calc(100% - 36px);
+  }
+
+  .volt-page .header-inner {
+    width: calc(100% - 36px);
+    min-height: 70px;
+  }
+
+  .volt-page .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .volt-page .brand-name {
+    font-size: 19px;
+  }
+
+  .volt-page .hero {
+    min-height: 700px;
+    background-position: 58% center;
+  }
+
+  .volt-page .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(9, 11, 9, 0.94),
+      rgba(9, 11, 9, 0.65)
+    );
+  }
+
+  .volt-page .hero-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+    padding-top: 25px;
+  }
+
+  .volt-page .status-pill {
+    font-size: 7px;
+  }
+
+  .volt-page .hero-content {
+    padding-top: 65px;
+    padding-bottom: 55px;
+  }
+
+  .volt-page .eyebrow-pill {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .volt-page .hero h1 {
+    font-size: clamp(57px, 14vw, 82px);
+    letter-spacing: -3.5px;
+    line-height: 0.9;
+  }
+
+  .volt-page .hero-content > p {
+    max-width: 420px;
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .volt-page .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 350px;
+  }
+
+  .volt-page .button-large {
+    width: 100%;
+    min-height: 51px;
+  }
+
+  .volt-page .hero-trust {
+    margin-top: 32px;
+  }
+
+  .volt-page .hero-bottom {
+    padding-bottom: 20px;
+  }
+
+  .volt-page .hero-location {
+    display: none;
+  }
+
+  .volt-page .hero-index i {
+    width: 30px;
+  }
+
+  .volt-page .section-space,
+  .volt-page .ethos-section,
+  .volt-page .facility-section,
+  .volt-page .membership-section {
+    padding: 75px 0;
+  }
+
+  .volt-page .section-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 25px;
+  }
+
+  .volt-page .section-side-note {
+    font-size: 8px;
+    text-align: left;
+  }
+
+  .volt-page .section-heading,
+  .volt-page .membership-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+
+  .volt-page .section-heading h2,
+  .volt-page .membership-heading h2,
+  .volt-page .facility-copy h2,
+  .volt-page .coach-copy h2 {
+    font-size: clamp(42px, 11vw, 60px);
+    letter-spacing: -2.5px;
+  }
+
+  .volt-page .ethos-description {
+    max-width: 100%;
+  }
+
+  .volt-page .ethos-description p,
+  .volt-page .programs-heading > p,
+  .volt-page .membership-heading > p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .volt-page .metrics-grid {
+    border-radius: 13px;
+  }
+
+  .volt-page .metric-card {
+    min-height: 165px;
+    padding: 17px 14px;
+  }
+
+  .volt-page .metric-card-top {
+    font-size: 7px;
+  }
+
+  .volt-page .metric-card-top .material-symbols-outlined {
+    font-size: 18px;
+  }
+
+  .volt-page .metric-value {
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  .volt-page .metric-card-bottom p {
+    font-size: 9px;
+  }
+
+  .volt-page .program-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .volt-page .programs-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .volt-page .facility-main-image {
+    min-height: 390px;
+  }
+
+  .volt-page .facility-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volt-page .facility-copy > p {
+    font-size: 12px;
+  }
+
+  .volt-page .facility-list-item {
+    gap: 11px;
+  }
+
+  .volt-page .facility-list-item strong {
+    font-size: 11px;
+  }
+
+  .volt-page .facility-list-item small {
+    font-size: 9px;
+  }
+
+  .volt-page .coach-panel {
+    padding: 13px;
+  }
+
+  .volt-page .coach-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .volt-page .coach-portrait-wrap {
+    min-height: 420px;
+  }
+
+  .volt-page .coach-copy {
+    padding: 20px 8px 15px;
+  }
+
+  .volt-page .coach-copy blockquote {
+    font-size: 15px;
+  }
+
+  .volt-page .coach-stats {
+    gap: 8px;
+  }
+
+  .volt-page .coach-stats strong {
+    font-size: 21px;
+  }
+
+  .volt-page .coach-stats span {
+    font-size: 6px;
+  }
+
+  .volt-page .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volt-page .plan-card:last-child {
+    grid-column: auto;
+  }
+
+  .volt-page .plan-card {
+    padding: 23px;
+  }
+
+  .volt-page .plan-description {
+    min-height: auto;
+  }
+
+  .volt-page .final-cta-section {
+    padding: 20px 0 75px;
+  }
+
+  .volt-page .final-cta-panel {
+    min-height: 490px;
+    border-radius: 17px;
+  }
+
+  .volt-page .final-cta-content {
+    width: 100%;
+    padding: 35px 23px;
+  }
+
+  .volt-page .final-cta-content h2 {
+    font-size: clamp(55px, 14vw, 76px);
+    letter-spacing: -3px;
+  }
+
+  .volt-page .final-cta-content > p {
+    font-size: 12px;
+  }
+
+  .volt-page .cta-decoration {
+    top: auto;
+    right: -70px;
+    bottom: -100px;
+    width: 230px;
+    height: 230px;
+    transform: none;
+  }
+
+  .volt-page .cta-decoration > span {
+    font-size: 190px;
+  }
+
+  .volt-page .site-footer {
+    padding-top: 65px;
+  }
+
+  .volt-page .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-bottom: 45px;
+  }
+
+  .volt-page .footer-links-column {
+    grid-column: auto;
+    padding-top: 30px;
+  }
+
+  .volt-page .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 1.7;
+  }
+
+  .volt-page .footer-bottom > div {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .volt-page .page-container {
+    width: calc(100% - 28px);
+  }
+
+  .volt-page .header-inner {
+    width: calc(100% - 28px);
+  }
+
+  .volt-page .brand-tagline {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .volt-page .hero {
+    min-height: 660px;
+  }
+
+  .volt-page .hero h1 {
+    font-size: clamp(48px, 13vw, 57px);
+    letter-spacing: -2.5px;
+  }
+
+  .volt-page .hero-trust strong {
+    font-size: 10px;
+  }
+
+  .volt-page .hero-trust > div:last-child > span {
+    font-size: 9px;
+  }
+
+  .volt-page .section-heading h2,
+  .volt-page .membership-heading h2,
+  .volt-page .facility-copy h2,
+  .volt-page .coach-copy h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+
+  .volt-page .metric-card {
+    min-height: 150px;
+    padding: 14px 11px;
+  }
+
+  .volt-page .metric-card-top {
+    font-size: 6px;
+  }
+
+  .volt-page .metric-value {
+    font-size: 29px;
+  }
+
+  .volt-page .facility-main-image {
+    min-height: 320px;
+  }
+
+  .volt-page .coach-portrait-wrap {
+    min-height: 350px;
+  }
+
+  .volt-page .coach-image-caption {
+    flex-direction: column;
+    gap: 7px;
+    font-size: 7px;
+  }
+
+  .volt-page .coach-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .volt-page .coach-stats > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .volt-page .footer-links-column {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .volt-page .footer-links-column a {
+    font-size: 7px;
+  }
+
+  .volt-page .footer-bottom {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL SCREENS
+========================================================= */
+
+@media (max-width: 280px) {
+  .volt-page .page-container,
+  .volt-page .header-inner {
+    width: calc(100% - 20px);
+  }
+
+  .volt-page .brand {
+    gap: 7px;
+  }
+
+  .volt-page .brand-mark {
+    width: 31px;
+    height: 31px;
+  }
+
+  .volt-page .brand-name {
+    font-size: 16px;
+  }
+
+  .volt-page .menu-toggle {
+    width: 37px;
+    height: 37px;
+  }
+
+  .volt-page .hero h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .volt-page .section-heading h2,
+  .volt-page .membership-heading h2,
+  .volt-page .facility-copy h2,
+  .volt-page .coach-copy h2 {
+    font-size: 33px;
+    letter-spacing: -1.7px;
+  }
+
+  .volt-page .metric-card {
+    padding: 12px 9px;
+  }
+
+  .volt-page .metric-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .volt-page .metric-value {
+    font-size: 25px;
+  }
+
+  .volt-page .facility-feature {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .volt-page .coach-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .volt-page .coach-stats > div:last-child {
+    grid-column: auto;
+  }
+
+  .volt-page .plan-card {
+    padding: 18px;
+  }
+
+  .volt-page .plan-price strong {
+    font-size: 35px;
+  }
+
+  .volt-page .final-cta-content {
+    padding: 28px 16px;
+  }
+
+  .volt-page .final-cta-content h2 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .volt-page .footer-links-column {
+    grid-template-columns: 1fr;
+  }
+
+  .volt-page .footer-bottom > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY — KEYBOARD FOCUS
+========================================================= */
+
+.volt-page a:focus-visible,
+.volt-page button:focus-visible {
+  outline: 2px solid var(--home-lime);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .volt-page *,
+  .volt-page *::before,
+  .volt-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
